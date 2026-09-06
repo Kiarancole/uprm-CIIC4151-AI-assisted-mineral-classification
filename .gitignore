@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Datasets
+data/
+datasets/
+*.csv
+*.tsv
+
+# PyTorch Model Checkpoints
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+.next/
+.nuxt/
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

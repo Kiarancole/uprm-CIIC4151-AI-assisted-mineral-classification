@@ -29,6 +29,15 @@ The final system will use a web interface connected to a remotely hosted model. 
 
 The project is currently under development. The supported mineral classes, final model, success targets, and deployment platform will be determined through experimentation and consultation with the project advisor.
 
+## Repository Structure
+
+- `docs/`: Project documentation, including architecture specs, meeting notes, and reports.
+- `notebooks/`: Jupyter and Colab notebooks for data analysis, model training, and evaluation.
+- `src/`: Source code directory containing:
+  - `src/model/`: Model training, evaluation, preprocessing, and inference code.
+  - `src/api/`: Remote prediction API service.
+  - `src/web/`: Web application interface.
+
 ## Team
 
 Developed by a three-person senior software engineering capstone team at the University of Puerto Rico at Mayagüez under the guidance of Professor Kumar.
