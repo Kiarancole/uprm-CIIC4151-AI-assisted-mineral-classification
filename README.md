@@ -31,9 +31,8 @@ The project is currently under development. The supported mineral classes, final
 
 ## Repository Structure
 
-- `docs/`: Project documentation, including architecture specs, meeting notes, and reports.
-- `notebooks/`: Jupyter and Colab notebooks for data analysis, model training, and evaluation.
-- `src/`: Source code directory containing:
+ `docs/`: Project documentation, including architecture specs, research notes, meeting notes, and reports.
+ `docs/research/`: Research documents and links, organized by datasets, models, experiments, and evaluation.
   - `src/model/`: Model training, evaluation, preprocessing, and inference code.
   - `src/api/`: Remote prediction API service.
   - `src/web/`: Web application interface.
