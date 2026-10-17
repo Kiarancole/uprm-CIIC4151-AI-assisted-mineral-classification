@@ -1,0 +1,77 @@
+{
+  "groups": {
+    "high": {
+      "zip": "high_224.zip",
+      "index": "high_224_index.csv",
+      "n_images": 19166,
+      "zip_bytes": 398482995,
+      "zip_sha256": "9f2678cda1a12dada1b1d06e89f4a5103ea2340814e50221e4d4f3bad3a405f5",
+      "labels": {
+        "baryte": 0,
+        "beryl": 1,
+        "copper": 2,
+        "fluorite": 3,
+        "quartz": 4
+      },
+      "counts": {
+        "train": 13412,
+        "val": 2880,
+        "test": 2874
+      }
+    },
+    "medium": {
+      "zip": "medium_224.zip",
+      "index": "medium_224_index.csv",
+      "n_images": 7114,
+      "zip_bytes": 190728925,
+      "zip_sha256": "bdb941866841571fa65286c3557f8c551eea4927bc9e29a9b296ffaa464828b7",
+      "labels": {
+        "azurite": 0,
+        "cerussite": 1,
+        "malachite": 2,
+        "pyromorphite": 3,
+        "smithsonite": 4
+      },
+      "counts": {
+        "train": 4980,
+        "val": 1069,
+        "test": 1065
+      }
+    },
+    "low": {
+      "zip": "low_224.zip",
+      "index": "low_224_index.csv",
+      "n_images": 13069,
+      "zip_bytes": 299046605,
+      "zip_sha256": "4c029a3c6377dce755bdbd7d029fe9768e4ce1b6a37fede9656c14b9aa1f13a1",
+      "labels": {
+        "calcite": 0,
+        "gypsum": 1,
+        "hematite": 2,
+        "pyrite": 3,
+        "wulfenite": 4
+      },
+      "counts": {
+        "train": 9154,
+        "test": 1962,
+        "val": 1953
+      }
+    }
+  },
+  "splits_csv_sha256": "24f264149e95f3cc4d442f1394032b60dbf2579e590638a601f3c7bb2fa937ed",
+  "img_size": 224,
+  "pad_color": [
+    124,
+    116,
+    104
+  ],
+  "resize": "letterbox: EXIF rotate, long side to IMG_SIZE (bicubic), centered, pad with pad_color",
+  "jpeg_quality": 95,
+  "jpeg_subsampling": "4:4:4",
+  "updated_utc": "2026-10-16T03:13:29+00:00",
+  "versions": {
+    "python": "3.13.16",
+    "pillow": "11.3.0",
+    "numpy": "2.1.3"
+  }
+}
