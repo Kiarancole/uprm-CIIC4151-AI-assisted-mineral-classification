@@ -31,11 +31,22 @@ The project is currently under development. The supported mineral classes, final
 
 ## Repository Structure
 
- `docs/`: Project documentation, including architecture specs, research notes, meeting notes, and reports.
- `docs/research/`: Research documents and links, organized by datasets, models, experiments, and evaluation.
-  - `src/model/`: Model training, evaluation, preprocessing, and inference code.
-  - `src/api/`: Remote prediction API service.
-  - `src/web/`: Web application interface.
+- `configs/`: Shared experiment settings that every team member must use.
+- `notebooks/`: Dataset preparation and Google Colab entry-point notebooks.
+- `scripts/`: Command-line scripts for running the experiments.
+- `src/model/`: Shared model training, evaluation, preprocessing, and inference code.
+- `results/`: Small, version-controlled experiment summaries.
+- `docs/`: Architecture, research notes, meeting notes, and reports.
+- `src/api/`: Future remote prediction API service.
+- `src/web/`: Future web application interface.
+
+## Preliminary Experiments
+
+Each team member owns one architecture—ResNet-18, EfficientNet-B0, or EfficientNet-B3—and trains it on all three five-mineral groups. Start with [`notebooks/03_train_assigned_model.ipynb`](notebooks/03_train_assigned_model.ipynb), and read the [`preliminary training runbook`](docs/research/preliminary-training-runbook.md) before an official run.
+
+After all nine runs are available, `scripts/compare_preliminary.py` creates the shared model-comparison summary.
+
+The [`training code references`](docs/research/training-code-references.md) explain the PyTorch components and link to the official documentation used to build the pipeline.
 
 ## Team
 
