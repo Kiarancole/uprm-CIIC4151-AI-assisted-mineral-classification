@@ -48,7 +48,7 @@ The loader verifies the dataset seed, split-manifest hashes, mineral groups, ima
 2. Run the setup cells to mount Drive, download the agreed repository version, and install the shared training package.
 3. Change only `MODEL_NAME` to the assigned architecture and confirm the shared Drive paths.
 4. Run the one-group smoke test.
-5. After the smoke test succeeds, run the assigned model on all three mineral groups. NOTE: A smoke test runs one epoch and verifies that the data, model, metrics, and output paths work. It is not an official experiment.
+5. After the smoke test succeeds, run the assigned model on all three mineral groups. The smoke-test results are not official and must not be included in the comparison.
 6. Keep large `.pt` checkpoints in Google Drive. Copy the small JSON results into `results/preliminary/` for version control.
 
 ## Outputs
@@ -73,8 +73,7 @@ After all nine official experiments are available, generate the team comparison 
 
 ```bash
 python scripts/compare_preliminary.py
+```
 
-## Smoke test
-
-A smoke test runs one epoch and verifies that the data, model, metrics, and output paths work. It is not an official experiment and its numbers must not be included in the comparison.
+The script verifies that all runs used the same configuration and reports whether their Git commits and training hardware match. It writes the combined results to `results/preliminary/team_comparison.json`.
 
