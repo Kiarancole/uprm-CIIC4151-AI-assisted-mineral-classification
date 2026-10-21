@@ -31,17 +31,25 @@ Do not copy the training loop into separate notebooks. If the protocol changes, 
 
 Different architectures cannot contain identical initial tensors because their layers have different shapes. The fair comparison uses the same initialization policy and seed, not identical weight values.
 
-## Before official training
+## Official Run Checklist
 
-1. Merge the dataset split and 224x224 cache pull requests.
-2. Confirm the three cache zip checksums against `cache_meta.json`.
-3. Run one smoke test for each architecture.
-4. Confirm the values in `configs/preliminary_experiment.json` with the team and Professor Kumar.
-5. Tag or record the exact Git commit used for all official runs.
+1. Review and approve `configs/preliminary_experiment.json` before beginning official training.
+2. Confirm that `high_224.zip`, `medium_224.zip`, and `low_224.zip` are available in `/content/drive/MyDrive/CSE_Capstone_Data/cache_224`.
+3. Agree on one Git commit hash. Every teammate must train using that exact version.
+4. Use the same Colab GPU type when comparing assimilation time. A T4 is the preferred shared target. If different GPUs are used, the training times are not directly comparable.
+5. Run one smoke test for each architecture before beginning official experiments. Smoke-test results are not included in the comparison.
+6. Once official training begins, do not change the configuration for an individual model. If a shared setting changes, all affected experiments must be rerun.
 
-Once the first official experiment begins, do not change the protocol for another model. A necessary correction means all affected experiments must be rerun.
+The loader verifies the dataset seed, split-manifest hashes, mineral groups, image size, padding color, class labels, image counts, and cache checksums before training.
 
-The loader also verifies the merged metadata: seed 42, matching split-manifest hashes, mineral groups, 224x224 image size, padding color `[124, 116, 104]`, class-to-label mappings, per-split image counts, and each zip's SHA-256 checksum.
+## Running the Experiments
+
+1. Open `notebooks/03_train_assigned_model.ipynb` in Google Colab and select a GPU runtime.
+2. Run the setup cells to mount Drive, download the agreed repository version, and install the shared training package.
+3. Change only `MODEL_NAME` to the assigned architecture and confirm the shared Drive paths.
+4. Run the one-group smoke test.
+5. After the smoke test succeeds, run the assigned model on all three mineral groups. NOTE: A smoke test runs one epoch and verifies that the data, model, metrics, and output paths work. It is not an official experiment.
+6. Keep large `.pt` checkpoints in Google Drive. Copy the small JSON results into `results/preliminary/` for version control.
 
 ## Outputs
 
@@ -60,6 +68,11 @@ Each run records:
 - SHA-256 checksum of the best checkpoint
 
 The aggregate file combines the three group macro F1 scores into the proposal's Priority-Weighted Score and records their cross-group standard deviation.
+
+After all nine official experiments are available, generate the team comparison with:
+
+```bash
+python scripts/compare_preliminary.py
 
 ## Smoke test
 

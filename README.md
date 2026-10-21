@@ -40,14 +40,6 @@ The project is currently under development. The supported mineral classes, final
 - `src/api/`: Future remote prediction API service.
 - `src/web/`: Future web application interface.
 
-## Preliminary Experiments
-
-Each team member owns one architecture—ResNet-18, EfficientNet-B0, or EfficientNet-B3—and trains it on all three five-mineral groups. Start with [`notebooks/03_train_assigned_model.ipynb`](notebooks/03_train_assigned_model.ipynb), and read the [`preliminary training runbook`](docs/research/preliminary-training-runbook.md) before an official run.
-
-After all nine runs are available, `scripts/compare_preliminary.py` creates the shared model-comparison summary.
-
-The [`training code references`](docs/research/training-code-references.md) explain the PyTorch components and link to the official documentation used to build the pipeline.
-
 ## Team
 
 Developed by a three-person senior software engineering capstone team at the University of Puerto Rico at Mayagüez under the guidance of Professor Kumar.
