@@ -1,0 +1,197 @@
+{
+  "assimilation_time_seconds": 596.204577594,
+  "best_epoch": 17,
+  "best_validation_macro_f1": 0.8055822651764928,
+  "checkpoint_sha256": "d59d324e4eda254d7ae61774565e6286260e598b776a0aae802e4a3130de1a0c",
+  "classes": [
+    "azurite",
+    "cerussite",
+    "malachite",
+    "pyromorphite",
+    "smithsonite"
+  ],
+  "complexity": {
+    "total_parameters": 4013953,
+    "trainable_parameters": 4013953
+  },
+  "cpu_inference_latency": {
+    "mean_seconds": 0.03609264196999902,
+    "median_seconds": 0.03493129099979342,
+    "p95_seconds": 0.04534700685001098,
+    "samples": 100
+  },
+  "device": "cuda",
+  "git_commit": "0d38111ed8df3ebb5d2f0ba039daf4b99cd6b258",
+  "group": "medium",
+  "hardware": {
+    "gpu": "Tesla T4",
+    "processor": "x86_64"
+  },
+  "model": "efficientnet_b0",
+  "protocol_version": "1.0",
+  "seed": 42,
+  "shared_config": {
+    "data": {
+      "augmentation": {
+        "horizontal_flip_probability": 0.5,
+        "rotation_degrees": 10,
+        "rotation_fill": [
+          124,
+          116,
+          104
+        ],
+        "vertical_flip_probability": 0.5
+      },
+      "batch_size": 16,
+      "cache_pad_color": [
+        124,
+        116,
+        104
+      ],
+      "image_size": 224,
+      "normalization_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalization_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "num_workers": 2
+    },
+    "evaluation": {
+      "calibration_bins": 10,
+      "latency_samples": 100,
+      "top_k": [
+        1,
+        3
+      ]
+    },
+    "groups": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "models": [
+      "resnet18",
+      "efficientnet_b0",
+      "efficientnet_b3"
+    ],
+    "priority_weights": {
+      "high": 0.5,
+      "low": 0.2,
+      "medium": 0.3
+    },
+    "protocol_version": "1.0",
+    "seed": 42,
+    "selection": {
+      "high_group_minimum_worst_class_recall": 0.7,
+      "pws_tie_margin": 0.02
+    },
+    "success_thresholds": {
+      "cpu_inference_mean_seconds_maximum": 3.0,
+      "cross_group_standard_deviation_maximum": 0.1,
+      "expected_calibration_error_maximum": 0.1,
+      "macro_f1_minimum": 0.8,
+      "per_class_precision_minimum": 0.8,
+      "per_class_recall_minimum": 0.8,
+      "top3_accuracy_minimum": 0.85
+    },
+    "training": {
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "loss": "balanced_cross_entropy",
+      "mixed_precision": true,
+      "optimizer": "adamw",
+      "scheduler": "cosine",
+      "selection_metric": "macro_f1",
+      "weight_decay": 0.0001
+    }
+  },
+  "test_loss": 0.5029509560323098,
+  "test_metrics": {
+    "accuracy": 0.812206572769953,
+    "confusion_matrix": [
+      [
+        179,
+        7,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        158,
+        2,
+        14,
+        28
+      ],
+      [
+        2,
+        9,
+        217,
+        6,
+        7
+      ],
+      [
+        1,
+        23,
+        4,
+        210,
+        16
+      ],
+      [
+        3,
+        50,
+        7,
+        18,
+        101
+      ]
+    ],
+    "expected_calibration_error": 0.020694106537411446,
+    "macro_f1": 0.8048830595862537,
+    "per_class": {
+      "azurite": {
+        "f1": 0.9572192513368984,
+        "precision": 0.9572192513368984,
+        "recall": 0.9572192513368984,
+        "support": 187
+      },
+      "cerussite": {
+        "f1": 0.7006651884700665,
+        "precision": 0.6396761133603239,
+        "recall": 0.7745098039215687,
+        "support": 204
+      },
+      "malachite": {
+        "f1": 0.921443736730361,
+        "precision": 0.9434782608695652,
+        "recall": 0.9004149377593361,
+        "support": 241
+      },
+      "pyromorphite": {
+        "f1": 0.8366533864541833,
+        "precision": 0.8467741935483871,
+        "recall": 0.8267716535433071,
+        "support": 254
+      },
+      "smithsonite": {
+        "f1": 0.608433734939759,
+        "precision": 0.6601307189542484,
+        "recall": 0.5642458100558659,
+        "support": 179
+      }
+    },
+    "top3_accuracy": 0.9802816901408451,
+    "worst_class_recall": 0.5642458100558659
+  },
+  "training_seconds": 596.204577594,
+  "versions": {
+    "numpy": "2.1.3",
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130"
+  }
+}
