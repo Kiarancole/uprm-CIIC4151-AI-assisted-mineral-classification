@@ -1,0 +1,16 @@
+{
+  "cross_group_macro_f1_standard_deviation": 0.10381028048649908,
+  "group_macro_f1": {
+    "high": 0.55037838834065,
+    "low": 0.6151586397780903,
+    "medium": 0.7957173900222683
+  },
+  "groups_completed": [
+    "high",
+    "medium",
+    "low"
+  ],
+  "model": "resnet18",
+  "priority_weighted_score": 0.6369361391326236,
+  "seed": 42
+}
