@@ -1,0 +1,162 @@
+{
+  "created_utc": "2026-11-02T02:24:17+00:00",
+  "splits_csv_sha256": "d63dc13ee12d49ca379b6f6411ee75fd0871147f0e31782007303f2acc3bbd6c",
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "phash_threshold": 6,
+  "groups": {
+    "high": [
+      "baryte",
+      "beryl",
+      "copper",
+      "fluorite",
+      "quartz"
+    ],
+    "medium": [
+      "azurite",
+      "malachite",
+      "smithsonite",
+      "cerussite",
+      "pyromorphite"
+    ],
+    "low": [
+      "wulfenite",
+      "calcite",
+      "gypsum",
+      "hematite",
+      "pyrite"
+    ]
+  },
+  "aliases": {
+    "barite": "baryte",
+    "haematite": "hematite",
+    "native copper": "copper",
+    "flourite": "fluorite"
+  },
+  "sources": {
+    "mineral-photos": [
+      "azurite",
+      "baryte",
+      "beryl",
+      "calcite",
+      "cerussite",
+      "copper",
+      "fluorite",
+      "gypsum",
+      "hematite",
+      "malachite",
+      "pyrite",
+      "pyromorphite",
+      "quartz",
+      "smithsonite",
+      "wulfenite"
+    ],
+    "mineral-classification": [
+      "calcite",
+      "fluorite",
+      "gypsum",
+      "quartz"
+    ],
+    "seen-geology-supplement": [
+      "azurite",
+      "hematite"
+    ]
+  },
+  "manual_exclude": [],
+  "n_images": 39422,
+  "n_excluded": 17651,
+  "n_multi_image_clusters": 425,
+  "counts": {
+    "azurite": {
+      "train": 886,
+      "val": 189,
+      "test": 193
+    },
+    "baryte": {
+      "train": 1544,
+      "val": 333,
+      "test": 334
+    },
+    "beryl": {
+      "train": 1132,
+      "val": 241,
+      "test": 242
+    },
+    "calcite": {
+      "train": 4600,
+      "val": 989,
+      "test": 993
+    },
+    "cerussite": {
+      "train": 953,
+      "val": 206,
+      "test": 206
+    },
+    "copper": {
+      "train": 1001,
+      "val": 213,
+      "test": 215
+    },
+    "fluorite": {
+      "train": 3981,
+      "val": 851,
+      "test": 848
+    },
+    "gypsum": {
+      "train": 949,
+      "val": 208,
+      "test": 201
+    },
+    "hematite": {
+      "train": 911,
+      "val": 196,
+      "test": 194
+    },
+    "malachite": {
+      "train": 1126,
+      "val": 240,
+      "test": 241
+    },
+    "pyrite": {
+      "train": 1639,
+      "val": 350,
+      "test": 350
+    },
+    "pyromorphite": {
+      "train": 1196,
+      "val": 254,
+      "test": 255
+    },
+    "quartz": {
+      "train": 5779,
+      "val": 1237,
+      "test": 1238
+    },
+    "smithsonite": {
+      "train": 834,
+      "val": 176,
+      "test": 177
+    },
+    "wulfenite": {
+      "train": 1066,
+      "val": 229,
+      "test": 226
+    }
+  },
+  "per_source": {
+    "mineral-photos": 39349,
+    "mineral-classification": 38,
+    "seen-geology-supplement": 35
+  },
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "pillow": "11.3.0",
+    "imagehash": "4.3.2"
+  }
+}
