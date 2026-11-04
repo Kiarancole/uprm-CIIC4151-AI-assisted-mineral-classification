@@ -1,0 +1,16 @@
+{
+  "cross_group_macro_f1_standard_deviation": 0.10861950021580852,
+  "group_macro_f1": {
+    "high": 0.565885115161317,
+    "low": 0.5841325780389351,
+    "medium": 0.8048830595862537
+  },
+  "groups_completed": [
+    "high",
+    "medium",
+    "low"
+  ],
+  "model": "efficientnet_b0",
+  "priority_weighted_score": 0.6412339910643217,
+  "seed": 42
+}

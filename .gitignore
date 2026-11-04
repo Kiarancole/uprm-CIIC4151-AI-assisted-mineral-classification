@@ -52,6 +52,10 @@ datasets/
 *.bin
 *.onnx
 
+# Extracted image caches and local experiment artifacts
+mineral_cache/
+checkpoints/
+
 # Node / Frontend
 node_modules/
 npm-debug.log*
