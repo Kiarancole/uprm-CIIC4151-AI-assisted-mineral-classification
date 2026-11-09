@@ -31,11 +31,14 @@ The project is currently under development. The supported mineral classes, final
 
 ## Repository Structure
 
- `docs/`: Project documentation, including architecture specs, research notes, meeting notes, and reports.
- `docs/research/`: Research documents and links, organized by datasets, models, experiments, and evaluation.
-  - `src/model/`: Model training, evaluation, preprocessing, and inference code.
-  - `src/api/`: Remote prediction API service.
-  - `src/web/`: Web application interface.
+- `configs/`: Shared experiment settings that every team member must use.
+- `notebooks/`: Dataset preparation and Google Colab entry-point notebooks.
+- `scripts/`: Command-line scripts for running the experiments.
+- `src/model/`: Shared model training, evaluation, preprocessing, and inference code.
+- `results/`: Small, version-controlled experiment summaries.
+- `docs/`: Architecture, research notes, meeting notes, and reports.
+- `src/api/`: Future remote prediction API service.
+- `src/web/`: Future web application interface.
 
 ## Team
 
