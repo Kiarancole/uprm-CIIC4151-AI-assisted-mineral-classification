@@ -1,11 +1,15 @@
+import os 
 import base64
+import time
+from PIL import Image
 
 import torch
 from fastapi import HTTPException
 from pydantic import BaseModel
 from torchvision.models import efficientnet_b0
-from torchvision import datasets
-import os 
+from torchvision import datasets, transforms
+
+
 
 class MineralImage(BaseModel):
     uploaded_image: bytes
@@ -39,10 +43,17 @@ class ModelHandler:
         temp.close()
 
         # TODO implement transforms properly to make it work
-        image = "HERE_IT_EXPLODES" # with open "test_image") # skip transforms, may be needed later: transform=train_transform),
-        image = image.to(torch.device("cpu"), non_blocking=True)
+        
+        # TODO find why its breaking with a PIL.UnidentifiedImageError: cannot identify image file 'test_image/temp.jpeg'
+        image = Image.open("test_image/temp.jpeg")
+        transform = transforms.Compose([
+            transforms.PILToTensor()
+        ]) # with open "test_image"
+        image_tensor = transform(image)
+
+        image_tensor = image_tensor.to(torch.device("cpu"), non_blocking=True)
         result = self.model(image)
-        # ????????????????
+        # ???????????????? foul magic
         return {'result': result}
 
         # TODO call model to predict stuff post processing/checking image
